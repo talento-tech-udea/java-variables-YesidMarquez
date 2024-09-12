@@ -33,19 +33,23 @@ public class PerimeterCalculator {
 
     public int getTotalPoints(Shape s) {
         // Definir la variable para el total de puntos
+        int totalPoints = 0;
         for(Point point: s.getPoints()) {
             // Acumular el total de puntos
+            totalPoints++;
         }
 
         // Retornas el valor de puntos
+        return totalPoints;
     }
 
     public static void main (String[] args) {
         PerimeterCalculator perimeterCalculator = new PerimeterCalculator();
         // Definit el nombre del archivo
+        String fileName= "square.txt";
         Shape shape = new Shape();
 
-        shape.readPoints("nombre_archivo");
+        shape.readPoints(fileName);
         // Mostrar el valor de calculatePerimeter y getTotalPoints
     }
 }
